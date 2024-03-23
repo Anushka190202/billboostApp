@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.AddInvoice">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.34"
+        android:src="@drawable/invoice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD INVOICE"
+        android:background="#B0D6EF"
+        android:textSize="30sp"
+        android:textColor="@color/ic_launcher_background"
+        android:layout_margin="@dimen/_12sdp"
+        android:id="@+id/tvAddInvoice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lyCompany"
+        app:layout_constraintTop_toBottomOf="@id/tvAddInvoice"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Company : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:id="@+id/tvCompany"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_13sdp"
+            android:background="#6AD7E4F4"
+            android:id="@+id/spCompany"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lyClient"
+        app:layout_constraintTop_toBottomOf="@id/lyCompany"
+        app:layout_constraintStart_toStartOf="@id/lyCompany">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Client : "
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_12sdp"
+            android:id="@+id/tvClient" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:padding="@dimen/_13sdp"
+            android:id="@+id/spClient"/>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Invoice Number"
+        android:layout_margin="@dimen/_12sdp"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/etInvoiceNo"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/lyClient"
+        app:layout_constraintStart_toStartOf="@id/lyClient" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date"
+        android:layout_margin="@dimen/_12sdp"
+        android:id="@+id/etDate"
+        android:inputType="date"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/etInvoiceNo"
+        app:layout_constraintStart_toStartOf="@id/etInvoiceNo" />
+    <TableRow
+        android:id="@+id/tvTableHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDate">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="S.no."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:text="Item Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:text="Quantity"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:text="Price/Item"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </TableRow>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTableHeader"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

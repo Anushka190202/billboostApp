@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/m_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+    <item
         android:id="@+id/m_clients"
         android:icon="@drawable/baseline_person_search_24"
-        android:title="Add Clients" />
+        android:title="Clients" />
     <item
         android:id="@+id/m_company"
         android:icon="@drawable/baseline_add_business_24"
-        android:title="Add Company" />
+        android:title="Company" />
     <item
         android:title="settings"
         android:icon="@drawable/baseline_settings_24"
         android:id="@+id/m_settings"/>
-
 </menu>

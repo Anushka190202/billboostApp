@@ -1,11 +1,10 @@
 package com.example.billboostapp.Activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import com.example.billboostapp.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.billboostapp.databinding.ActivityLoginBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -14,6 +13,13 @@ import com.google.firebase.auth.auth
 class login : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
     lateinit var auth: FirebaseAuth
+    public override fun onStart() {
+        super.onStart()
+        val currentUser=auth.currentUser
+        if (currentUser != null) {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
