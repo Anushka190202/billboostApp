@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.billboostapp.DataModels.Clients
 import com.example.billboostapp.R
 
@@ -18,8 +17,7 @@ class ClientAdapter(var clientList: List<Clients>): RecyclerView.Adapter<ClientA
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.client_list, parent, false)
-//        context=parent.context
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.client_company_list, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -29,10 +27,10 @@ class ClientAdapter(var clientList: List<Clients>): RecyclerView.Adapter<ClientA
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = clientList[position]
-        holder.tvName.setText(item.clientName.toString())
-        holder.tvContact.setText(item.contact.toString())
-        holder.tvEmail.setText(item.email.toString())
-        holder.tvAddress.setText(item.address.toString())
+        holder.tvName.text = item.name
+        holder.tvContact.text = item.contact
+        holder.tvEmail.text = item.email
+        holder.tvAddress.text = item.address
     }
 
 }

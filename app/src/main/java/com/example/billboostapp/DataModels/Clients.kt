@@ -1,10 +1,13 @@
 package com.example.billboostapp.DataModels
 
-import android.provider.ContactsContract.CommonDataKinds.Email
+import java.io.Serializable
 
 data class Clients(
-    var clientName:String,
-    var contact:String,
-    var email:Email,
-    var address:String
-)
+    var name:String?=null,
+    var contact:String?=null,
+    var email:String?=null,
+    var address:String?=null,
+    var id:String?=""
+): Serializable {
+
+}
