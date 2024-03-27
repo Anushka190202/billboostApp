@@ -12,6 +12,7 @@
         android:id="@+id/m_company"
         android:icon="@drawable/baseline_add_business_24"
         android:title="Company" />
+
     <item
         android:title="settings"
         android:icon="@drawable/baseline_settings_24"

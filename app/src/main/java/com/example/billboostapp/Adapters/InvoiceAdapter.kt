@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.billboostapp.R
-
 class InvoiceAdapter (var namesList:List<String>): RecyclerView.Adapter<InvoiceAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var tvName= view.findViewById<TextView>(R.id.tvName)

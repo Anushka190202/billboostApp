@@ -32,29 +32,30 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/lyCompany"
+        android:layout_margin="@dimen/_3sdp"
         app:layout_constraintTop_toBottomOf="@id/tvAddInvoice"
         app:layout_constraintStart_toStartOf="parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select Company : "
+            android:padding="@dimen/_8sdp"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginVertical="@dimen/_12sdp"
-            android:layout_marginStart="@dimen/_12sdp"
+            android:textSize="@dimen/_15sdp"
             android:id="@+id/tvCompany"/>
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:paddingVertical="@dimen/_13sdp"
-            android:background="#6AD7E4F4"
+            android:background="@drawable/et_border"
+            android:padding="@dimen/_12sdp"
             android:id="@+id/spCompany"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        android:layout_margin="@dimen/_3sdp"
         android:id="@+id/lyClient"
         app:layout_constraintTop_toBottomOf="@id/lyCompany"
         app:layout_constraintStart_toStartOf="@id/lyCompany">
@@ -62,37 +63,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select Client : "
-            android:textSize="20sp"
+            android:padding="@dimen/_8sdp"
+            android:textSize="@dimen/_15sdp"
             android:textColor="@color/black"
-            android:layout_margin="@dimen/_12sdp"
             android:id="@+id/tvClient" />
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_10sdp"
-            android:padding="@dimen/_13sdp"
+
+            android:background="@drawable/et_border"
+            android:padding="@dimen/_12sdp"
             android:id="@+id/spClient"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyInvoiceNo_date"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/lyClient"
+        app:layout_constraintStart_toStartOf="@id/lyClient">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Invoice Number"
-        android:layout_margin="@dimen/_12sdp"
         android:padding="@dimen/_10sdp"
+        android:layout_weight="1"
         android:id="@+id/etInvoiceNo"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/lyClient"
-        app:layout_constraintStart_toStartOf="@id/lyClient" />
-    <EditText
+       />
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Date"
-        android:layout_margin="@dimen/_12sdp"
-        android:id="@+id/etDate"
+        android:hint="Enter Issue Date"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:id="@+id/tvDate"
         android:inputType="date"
-        android:padding="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@id/etInvoiceNo"
-        app:layout_constraintStart_toStartOf="@id/etInvoiceNo" />
+        android:padding="@dimen/_12sdp"
+        />
+    </LinearLayout>
     <TableRow
         android:id="@+id/tvTableHeader"
         android:layout_width="match_parent"
@@ -101,7 +110,7 @@
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etDate">
+        app:layout_constraintTop_toBottomOf="@id/lyInvoiceNo_date">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,16 +1,13 @@
 package com.example.billboostapp.Activities
-
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.billboostapp.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.billboostapp.databinding.ActivityLoginBinding
 import com.example.billboostapp.databinding.ActivitySignUpBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
-
 class SignUpActivity : AppCompatActivity() {
     lateinit var binding: ActivitySignUpBinding
     lateinit var auth: FirebaseAuth
@@ -37,7 +34,6 @@ class SignUpActivity : AppCompatActivity() {
                         Toast.makeText(baseContext,"Authentication failed!!"+task.exception, Toast.LENGTH_SHORT).show()
                     }
                 }
-
         }
     }
 }

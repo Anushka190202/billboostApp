@@ -13,6 +13,12 @@
         android:theme="@style/Theme.BillboostApp"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.InvoiceTemplate"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Fragments.AddClient"
             android:exported="false" />
         <activity
