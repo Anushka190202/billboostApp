@@ -214,31 +214,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:textColor="@color/black"
+                android:textStyle="bold"
+
                 android:text="S.no."/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:text="Item Name"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:text="Quantity"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:text="Price/Item"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:text="Total"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
         </TableRow>
     </TableLayout>
