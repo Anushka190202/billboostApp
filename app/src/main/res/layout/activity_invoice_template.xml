@@ -193,57 +193,55 @@
             android:padding="@dimen/_3sdp" />
 
     </LinearLayout>
-    <TableRow
-        android:id="@+id/tvTableHeader"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B561A2DA"
-        android:gravity="center"
+        android:id="@+id/tvTableHeader"
         app:layout_constraintTop_toBottomOf="@id/lyIssueDate"
-        app:layout_constraintBottom_toTopOf="@id/rvItems">
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+        <TableRow
+            android:id="@+id/tvItemList"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:text="S.no."
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"/>
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:text="S.no."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:text="Item Name"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:text="Quantity"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:text="Price/Item"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:text="Total"
+                android:textColor="@color/black"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:text="Item Name"
-
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:text="Quantity"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:text="Price/Item"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:text="Total"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"/>
-    </TableRow>
-
+        </TableRow>
+    </TableLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
         android:layout_width="match_parent"
