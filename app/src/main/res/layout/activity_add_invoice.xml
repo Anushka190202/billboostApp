@@ -6,145 +6,327 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".Activities.AddInvoice">
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0.34"
+        android:alpha="0.24"
         android:src="@drawable/invoice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/tvAddInvoice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD INVOICE"
-        android:background="#B0D6EF"
-        android:textSize="30sp"
-        android:textColor="@color/ic_launcher_background"
         android:layout_margin="@dimen/_12sdp"
-        android:id="@+id/tvAddInvoice"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="#B0D6EF"
+        android:text="ADD INVOICE"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lyCompany"/>
+
     <LinearLayout
+        android:id="@+id/lyCompany"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="horizontal"
-        android:id="@+id/lyCompany"
-        android:layout_margin="@dimen/_3sdp"
-        app:layout_constraintTop_toBottomOf="@id/tvAddInvoice"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddInvoice">
+
         <TextView
+            android:id="@+id/tvCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Company : "
             android:padding="@dimen/_8sdp"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp"
-            android:id="@+id/tvCompany"/>
+            android:text="Select Company : "
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="@dimen/_15sdp" />
+
         <Spinner
+            android:id="@+id/spCompany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/et_border"
-            android:padding="@dimen/_12sdp"
-            android:id="@+id/spCompany"/>
+            android:focusable="auto"
+            android:padding="@dimen/_12sdp" />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/lyClient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/_8sdp"
-        android:layout_margin="@dimen/_3sdp"
-        android:id="@+id/lyClient"
-        app:layout_constraintTop_toBottomOf="@id/lyCompany"
-        app:layout_constraintStart_toStartOf="@id/lyCompany">
+        app:layout_constraintStart_toStartOf="@id/lyCompany"
+        app:layout_constraintTop_toBottomOf="@id/lyCompany">
+
         <TextView
+            android:id="@+id/tvClient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Client : "
             android:padding="@dimen/_8sdp"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/black"
-            android:id="@+id/tvClient" />
+            android:text="Select Client : "
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="@dimen/_15sdp" />
+
         <Spinner
+            android:id="@+id/spClient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:background="@drawable/et_border"
-            android:padding="@dimen/_12sdp"
-            android:id="@+id/spClient"/>
+            android:padding="@dimen/_12sdp" />
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/lyInvoiceNo_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/lyClient"
-        app:layout_constraintStart_toStartOf="@id/lyClient">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Invoice Number"
-        android:padding="@dimen/_10sdp"
-        android:layout_weight="1"
-        android:id="@+id/etInvoiceNo"
-        android:inputType="text"
-       />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Issue Date"
-        android:layout_weight="1"
-        android:textColor="@color/black"
-        android:id="@+id/tvDate"
-        android:inputType="date"
-        android:padding="@dimen/_12sdp"
-        />
+        app:layout_constraintStart_toStartOf="@id/lyClient"
+        app:layout_constraintTop_toBottomOf="@id/lyClient">
+
+        <EditText
+            android:id="@+id/etInvoiceNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:textSize="@dimen/_15sdp"
+            android:hint="Enter Invoice Number"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvIssueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Issue Date"
+            android:inputType="date"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/black" />
     </LinearLayout>
-    <TableRow
-        android:id="@+id/tvTableHeader"
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_12sdp"
-        android:gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/listTable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lyInvoiceNo_date">
-        <TextView
-            android:layout_width="wrap_content"
+
+
+        <TableRow
+            android:id="@+id/tvTableHeader"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="S.no."/>
-        <TextView
-            android:layout_width="wrap_content"
+            android:background="#B561A2DA"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="S.no."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="Item Name"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="Quantity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="Price/Item"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="Total"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:text="Item Name"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:text="Quantity"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:text="Price/Item"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
-    </TableRow>
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+            android:background="#5BE6E4DF"
+            android:gravity="center">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:hint="S.no."
+                android:id="@+id/etSno"
+                android:textSize="@dimen/_15sdp"
+                android:inputType="number" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/etItemName"
+                android:hint="Item Name"
+                android:inputType="text" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textSize="@dimen/_15sdp"
+                android:hint="Quantity"
+                android:id="@+id/etQuantity"
+                android:inputType="number" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/etPrice"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:hint="Price/Item"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvtotal"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textSize="@dimen/_15sdp"/>
+
+        </TableRow>
+    </TableLayout>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listTable"
+        app:srcCompat="@drawable/baseline_add_circle_outline_24" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listTable">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:text="Tax"
+                    android:textAlignment="viewEnd" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/etborder2"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:text="Subtotal"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/etborder2"
+                    android:textAlignment="center" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:text="DueDate"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:id="@+id/tvDueDate"
+                    android:background="@drawable/etborder2"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:id="@+id/btnDone"
+        android:backgroundTint="@color/ic_launcher_background"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTableHeader"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

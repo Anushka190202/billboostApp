@@ -9,5 +9,8 @@ data class Clients(
     var address:String?=null,
     var id:String?=""
 ): Serializable {
+    override fun toString(): String {
+        return name.toString()
+    }
 
 }

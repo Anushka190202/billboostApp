@@ -14,7 +14,6 @@ class CompanyAdapter (var companyList: List<Company>):RecyclerView.Adapter<ViewH
         var tvContact=view.findViewById<TextView>(R.id.tvContact)
         var tvEmail=view.findViewById<TextView>(R.id.tvEmail)
         var tvAddress=view.findViewById<TextView>(R.id.tvAddress)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

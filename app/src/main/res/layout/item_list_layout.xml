@@ -3,45 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TableRow
-        android:id="@+id/tvTableHeader"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-        <EditText
-            android:layout_width="wrap_content"
+
+
+    <TableRow
+        android:id="@+id/tvItemList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_5sdp"
-            android:textSize="@dimen/_16sdp"
-            android:inputType="number"
+            android:textColor="@color/black"
+            android:id="@+id/tvSno"
             android:hint="S.no."/>
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:hint="Item Name"
+            android:id="@+id/tvItemName"
             android:inputType="text"
-            android:textSize="@dimen/_16sdp"/>
-        <EditText
-            android:layout_width="wrap_content"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:hint="Quantity"
-            android:inputType="number"
-            android:textSize="@dimen/_16sdp"/>
-        <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/tvQuantity"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_5sdp"
             android:hint="Price/Item"
-            android:inputType="number"
-            android:textSize="@dimen/_16sdp"/>
+            android:id="@+id/tvPrice"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:hint="Total"
+            android:id="@+id/tvTotal"
+            android:textColor="@color/black"/>
 
     </TableRow>
+    </TableLayout>
 
 
 

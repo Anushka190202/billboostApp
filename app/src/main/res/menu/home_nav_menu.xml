@@ -17,4 +17,8 @@
         android:title="settings"
         android:icon="@drawable/baseline_settings_24"
         android:id="@+id/m_settings"/>
+    <item
+        android:title="Logout"
+        android:icon="@drawable/baseline_logout_24"
+        android:id="@+id/m_logout"/>
 </menu>
