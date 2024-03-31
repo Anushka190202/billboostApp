@@ -3,21 +3,21 @@ package com.example.billboostapp.Adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.billboostapp.DataModels.Clients
 import com.example.billboostapp.R
 import com.example.billboostapp.clickInterface.ClientListInterface
 
-class ClientAdapter(var clientList: List<Clients>, var clientInterface: ClientListInterface): RecyclerView.Adapter<ClientAdapter.ViewHolder>(){
+class ClientAdapter(var clientList:List<Clients>, var clientInterface: ClientListInterface): RecyclerView.Adapter<ClientAdapter.ViewHolder>(){
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var tvName=view.findViewById<TextView>(R.id.tvName)
         var tvContact=view.findViewById<TextView>(R.id.tvContact)
         var tvEmail=view.findViewById<TextView>(R.id.tvEmail)
         var tvAddress=view.findViewById<TextView>(R.id.tvAddress)
-        var delete=view.findViewById<Button>(R.id.delete)
-        var update=view.findViewById<Button>(R.id.edit)
+        var delete=view.findViewById<ImageView>(R.id.delete)
+        var update=view.findViewById<ImageView>(R.id.edit)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

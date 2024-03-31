@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.billboostapp.R
 class InvoiceAdapter (var namesList:List<String>): RecyclerView.Adapter<InvoiceAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var tvInvoiceNo= view.findViewById<TextView>(R.id.tvName)
         var tvName= view.findViewById<TextView>(R.id.tvName)
     }
 
@@ -21,5 +22,7 @@ class InvoiceAdapter (var namesList:List<String>): RecyclerView.Adapter<InvoiceA
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = namesList[position]
         holder.tvName.setText(item)
+        holder.tvInvoiceNo.setText(item)
+
     }
 }

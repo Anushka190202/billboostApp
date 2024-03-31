@@ -17,7 +17,7 @@
         tools:layout="@layout/activity_add_company" />
     <fragment
         android:id="@+id/clientFragment"
-        android:name="com.example.billboostapp.Fragments.ClientFragmentInterface"
+        android:name="com.example.billboostapp.Fragments.ClientFragment"
         android:label="fragment_client"
         tools:layout="@layout/fragment_client" />
     <fragment
@@ -35,5 +35,10 @@
         android:name="com.example.billboostapp.Fragments.UpdateClientFragment"
         android:label="fragment_update_client"
         tools:layout="@layout/fragment_update_client" />
+    <fragment
+        android:id="@+id/updateCompanyFragment"
+        android:name="com.example.billboostapp.Fragments.UpdateCompanyFragment"
+        android:label="fragment_update_company"
+        tools:layout="@layout/fragment_update_company" />
 
 </navigation>
