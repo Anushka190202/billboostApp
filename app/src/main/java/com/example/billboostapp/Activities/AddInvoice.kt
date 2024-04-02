@@ -3,10 +3,12 @@ package com.example.billboostapp.Activities
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.billboostapp.DataModels.Clients
 import com.example.billboostapp.DataModels.Company
+import com.example.billboostapp.R
 import com.example.billboostapp.databinding.ActivityAddInvoiceBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -14,9 +16,9 @@ import com.google.firebase.firestore.firestore
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
-
+lateinit var binding: ActivityAddInvoiceBinding
 class AddInvoice : AppCompatActivity() {
-    lateinit var binding: ActivityAddInvoiceBinding
+
     lateinit var auth: FirebaseAuth
     var arrayList1 = ArrayList<Clients>()
     var arrayList2 = ArrayList<Company>()
@@ -31,6 +33,8 @@ class AddInvoice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddInvoiceBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         arrayAdapter1 = ArrayAdapter(
             this, android.R
                 .layout.simple_list_item_1, arrayList1
@@ -55,6 +59,7 @@ class AddInvoice : AppCompatActivity() {
                 }
             }
         }
+
         arrayAdapter2 = ArrayAdapter(
             this, android.R
                 .layout.simple_list_item_1, arrayList2
@@ -80,6 +85,11 @@ class AddInvoice : AppCompatActivity() {
             }
 
         }
+        binding.imageButton.setOnClickListener{
+            addNewView()
+
+        }
+
         binding.tvIssueDate.setOnClickListener {
             title = "KotlinApp"
             calendar = Calendar.getInstance()
@@ -122,5 +132,12 @@ class AddInvoice : AppCompatActivity() {
             startActivity(intent)
         }
 
+        }
+    private fun addNewView() {
+        // this method inflates the single item layout
+        // inside the parent linear layout
+        val inflater = LayoutInflater.from(this).inflate(R.layout.add_item_layout,null)
+        binding.addItem.addView(inflater, binding.addItem.childCount)
     }
-}
+    }
+

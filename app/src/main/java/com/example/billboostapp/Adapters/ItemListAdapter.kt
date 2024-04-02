@@ -33,5 +33,7 @@ class ItemListAdapter(var items: ArrayList<Items>): RecyclerView.Adapter<ItemLis
         holder.tvItemName.setText (item.itemName)
         holder.tvQuantity.setText (item.quantity.toString())
         holder.tvPricePerItem.setText(item.price_per_item.toString())
+
+
     }
 }

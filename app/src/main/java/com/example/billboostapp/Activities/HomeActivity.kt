@@ -46,11 +46,10 @@ class HomeActivity : AppCompatActivity() {
                 R.id.m_clients->{
 
                     navController.navigate(R.id.clientFragment)
-                    //replacefragment(ClientFragment())
+
                 }
                 R.id.m_company->{
 
-                   // replacefragment(CompanyFragment())
                     navController.navigate(R.id.companyFragment)
                 }
                 R.id.m_logout->{
