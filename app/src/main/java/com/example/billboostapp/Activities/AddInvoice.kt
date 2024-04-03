@@ -3,12 +3,10 @@ package com.example.billboostapp.Activities
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.billboostapp.DataModels.Clients
 import com.example.billboostapp.DataModels.Company
-import com.example.billboostapp.R
 import com.example.billboostapp.databinding.ActivityAddInvoiceBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -85,10 +83,10 @@ class AddInvoice : AppCompatActivity() {
             }
 
         }
-        binding.imageButton.setOnClickListener{
-            addNewView()
-
-        }
+//        binding.imageButton.setOnClickListener{
+//            addNewView()
+//
+//        }
 
         binding.tvIssueDate.setOnClickListener {
             title = "KotlinApp"
@@ -133,11 +131,11 @@ class AddInvoice : AppCompatActivity() {
         }
 
         }
-    private fun addNewView() {
-        // this method inflates the single item layout
-        // inside the parent linear layout
-        val inflater = LayoutInflater.from(this).inflate(R.layout.add_item_layout,null)
-        binding.addItem.addView(inflater, binding.addItem.childCount)
-    }
+//    private fun addNewView() {
+//        // this method inflates the single item layout
+//        // inside the parent linear layout
+//        val inflater = LayoutInflater.from(this).inflate(R.layout.add_item_layout,null)
+//        binding.rvItem.addView(inflater, binding.rvItem.childCount)
+//    }
     }
 

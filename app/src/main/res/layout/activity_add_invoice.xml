@@ -120,7 +120,7 @@
 
 
             <TableLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
                 android:padding="@dimen/_1sdp"
@@ -133,7 +133,7 @@
 
                 <TableRow
                     android:id="@+id/tvTableHeader"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#B561A2DA">
 <!--                    <LinearLayout-->
@@ -202,48 +202,48 @@
 <!--                    </LinearLayout>-->
                 </TableRow>
 <!--                <TableRow>-->
-<!--                    &lt;!&ndash;            <EditText&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:id="@+id/etSno"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_marginStart="@dimen/_2sdp"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:hint="S.no."&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:inputType="number"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:textSize="@dimen/_15sdp" />&ndash;&gt;-->
+                    <!--            <EditText-->
+                    <!--                android:id="@+id/etSno"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                android:hint="S.no."-->
+                    <!--                android:inputType="number"-->
+                    <!--                android:textSize="@dimen/_15sdp" />-->
 
-<!--                    &lt;!&ndash;            <EditText&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:id="@+id/etItemName"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_marginStart="@dimen/_2sdp"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:hint="Item Name"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:inputType="text"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:textSize="@dimen/_15sdp" />&ndash;&gt;-->
+                    <!--            <EditText-->
+                    <!--                android:id="@+id/etItemName"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                android:hint="Item Name"-->
+                    <!--                android:inputType="text"-->
+                    <!--                android:textSize="@dimen/_15sdp" />-->
 
-<!--                    &lt;!&ndash;            <EditText&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:id="@+id/etQuantity"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_marginStart="@dimen/_2sdp"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:hint="Quantity"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:inputType="number"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:textSize="@dimen/_15sdp" />&ndash;&gt;-->
+                    <!--            <EditText-->
+                    <!--                android:id="@+id/etQuantity"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                android:hint="Quantity"-->
+                    <!--                android:inputType="number"-->
+                    <!--                android:textSize="@dimen/_15sdp" />-->
 
-<!--                    &lt;!&ndash;            <EditText&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:id="@+id/etPrice"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_marginStart="@dimen/_2sdp"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:hint="Price/Item"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:inputType="number"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:textSize="@dimen/_15sdp" />&ndash;&gt;-->
+                    <!--            <EditText-->
+                    <!--                android:id="@+id/etPrice"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                android:hint="Price/Item"-->
+                    <!--                android:inputType="number"-->
+                    <!--                android:textSize="@dimen/_15sdp" />-->
 
-<!--                    &lt;!&ndash;            <TextView&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:id="@+id/tvtotal"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:layout_marginStart="@dimen/_2sdp"&ndash;&gt;-->
-<!--                    &lt;!&ndash;                android:textSize="@dimen/_15sdp" />&ndash;&gt;-->
+                    <!--            <TextView-->
+                    <!--                android:id="@+id/tvtotal"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+                    <!--                android:textSize="@dimen/_15sdp" />-->
 
 <!--                    <LinearLayout-->
 <!--                        android:id="@+id/addItem"-->
@@ -257,6 +257,13 @@
 <!--                        app:layout_constraintTop_toBottomOf="@+id/listTable"/>-->
 <!--                </TableRow>-->
             </TableLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/rvItem"
+                app:layout_constraintTop_toBottomOf="@id/listTable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

@@ -29,7 +29,7 @@ class ItemListAdapter(var items: ArrayList<Items>): RecyclerView.Adapter<ItemLis
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        holder.tvSno.setText((item.sno.toString()))
+//        holder.tvSno.setText((item.sno.toString()))
         holder.tvItemName.setText (item.itemName)
         holder.tvQuantity.setText (item.quantity.toString())
         holder.tvPricePerItem.setText(item.price_per_item.toString())
